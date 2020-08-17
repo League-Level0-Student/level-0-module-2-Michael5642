@@ -1,6 +1,6 @@
 
 
-int x;
+int x = 50;
 
 void setup() {
     size(800, 200);
@@ -14,11 +14,14 @@ void draw() {
  
     //2. Draw an ellipse of height and width 50. Make sure to use the x variable for its X position. 
     //   Pick a y value that places it half way down the window.
-      
+      fill(255,0,0);
+      ellipse(x, 100, 50,50);
     //3. Make the ellipse a nice color
 
     //4. If the mouse is pressed change the x value so that the dot moves to the right
-
+    if(mousePressed){
+    x = x+10;
+    }
     //5. If your dot moves slowly, make it move faster. If it moves too quickly, slow it down
     //  (you have to figure out what part of your code to change)
 
