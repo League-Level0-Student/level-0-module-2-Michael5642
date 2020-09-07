@@ -22,10 +22,11 @@ public class SafeCracker {
 		 * Your mission: use the tryCode method to crack the safe by trying all possible
 		 * combinations
 		 */
-		for(int i = 0;i < 101; i = i+1) {
-			try {
-				
-			}
+		Random object = new Random();
+		for(int i = 0;i < 9999999; i++) {
+			int rand = object.nextInt(9999999);
+			tryCode(rand);
+			System.out.println("try number:"+i);
 		}
 
 	}
@@ -39,6 +40,7 @@ public class SafeCracker {
 			JOptionPane.showMessageDialog(null, "Congratulations! You cracked the safe with " + guess);
 			playTheSoundOfSuccess();
 			System.exit(0);
+			
 		}
 	}
 
